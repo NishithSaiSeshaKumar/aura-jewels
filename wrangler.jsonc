@@ -1,0 +1,8 @@
+{
+  "name": "aura-jewels",
+  "compatibility_date": "2025-01-01",
+  "assets": {
+    "directory": "./apps/web/dist/aura-jewels-web/browser",
+    "not_found_handling": "single-page-application"
+  }
+}
