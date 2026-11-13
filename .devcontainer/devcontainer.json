@@ -1,0 +1,34 @@
+{
+  "name": "Aura Jewels - Zero-Cost Codespace",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/copilot-cli:1": {}
+  },
+  "postCreateCommand": "cd services/api && npm install && cd ../../apps/web && npm install",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "Angular.ng-template",
+        "bradlc.vscode-tailwindcss"
+      ],
+      "settings": {
+        "chat.agent.enabled": true,
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "forwardPorts": [4200, 8787],
+  "portsAttributes": {
+    "4200": {
+      "label": "Angular Frontend",
+      "onAutoForward": "notify"
+    },
+    "8787": {
+      "label": "Cloudflare Worker API",
+      "onAutoForward": "silent"
+    }
+  }
+}
