@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "aura-jewels-api",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-01-01",
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "aura-jewels-db",
+      "database_id": "a4d02ae5-82e7-4e1e-b127-cc39051d255a",
+      "migrations_dir": "migrations"
+    }
+  ]
+}
