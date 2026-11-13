@@ -12,6 +12,11 @@ export const routes: Routes = [
     title: 'Jewellery Piece | Aura Jewels'
   },
   {
+    path: 'admin',
+    loadComponent: () => import('./features/admin/admin.component').then(m => m.AdminComponent),
+    title: 'Admin | Aura Jewels'
+  },
+  {
     path: '**',
     redirectTo: ''
   }
