@@ -1,0 +1,15 @@
+{
+  "name": "aura-jewels",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "services/*"
+  ],
+  "scripts": {
+    "start:web": "npm run start --workspace=apps/web",
+    "start:api": "npm run dev --workspace=services/api",
+    "build:web": "npm run build --workspace=apps/web",
+    "deploy:api": "npm run deploy --workspace=services/api"
+  }
+}
